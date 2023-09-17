@@ -5,11 +5,12 @@ plugins {
 
 android {
     namespace = "com.dacoding.easytimer"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.dacoding.easytimer"
-        minSdk = 24
+        minSdk = 26
+        //noinspection OldTargetApi
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -51,6 +52,7 @@ android {
 
 dependencies {
 
+    //noinspection GradleDependency
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.activity:activity-compose:1.7.2")
@@ -66,4 +68,19 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    //life cycle
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+
+    //runtime liveDate
+    implementation("androidx.compose.runtime:runtime-livedata:1.5.1")
+
+    //viewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+
+    //view binding - added if you prefer to use viewBinding with compose
+    implementation("androidx.compose.ui:ui-viewbinding:1.5.1")
+
+    //konfetti
+    implementation("nl.dionsegijn:konfetti:1.2.6")
 }
