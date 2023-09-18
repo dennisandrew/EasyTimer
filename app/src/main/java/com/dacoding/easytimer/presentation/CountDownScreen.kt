@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -36,11 +37,6 @@ fun CountDownScreen(viewModel: MainViewModel) {
     val celebrate by viewModel.celebrate.observeAsState(false)
 
 
-
-
-
-
-
     CountDown(
         viewModel = viewModel,
         time = if (viewModel.pickedTime.value == null) {
@@ -54,9 +50,8 @@ fun CountDownScreen(viewModel: MainViewModel) {
     ) {
         viewModel.handleCountDownTimer()
     }
-
-
 }
+
 
 @ExperimentalMaterial3Api
 @Composable
